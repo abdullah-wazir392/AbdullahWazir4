@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Wazir's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="file:///E:/homework/img/WORD.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1c1c1c, #343a40, #1c1c1c);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #cfcfcf;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        
+        header {
+            padding: 1rem 0;
+            text-align: center;
+            background-color: white
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            hieght: 2%;
+        }
+        
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        header nav a {
+            color: #cfcfcf;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        header nav a:hover {
+            background-color: #444;
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 4rem 0;
+            margin-top: 60px; /* To ensure content doesn't hide under fixed header */
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 1s;
+        }
+        
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            animation: fadeIn 1.5s forwards;
+        }
+        
+        .about, .skills, .projects, .contact {
+            text-align: center;
+            animation: fadeIn 2s forwards;
+        }
+
+        .about {
+            animation-delay: 1.2s;
+        }
+
+        .skills {
+            animation-delay: 1.4s;
+        }
+
+        .projects {
+            animation-delay: 1.6s;
+        }
+
+        .contact {
+            animation-delay: 1.8s;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-pic {
+            width: 417px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            animation: bounceIn 2s forwards;
+        }
+        
+        @keyframes bounceIn {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 0.9; transform: scale(1.1); }
+            70% { opacity: 1; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .skills ul li {
+            background-color: #444;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border-radius: 5px;
+            color: #ffffff;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: calc(2s + var(--delay));
+        }
+        
+        .projects .project-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: #444;
+            border-radius: 5px;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+            animation-delay: calc(2s + var(--delay));
+        }
+        
+        .contact a {
+            color: #1e90ff;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+            color: #ff4500;
+            transform: scale(1.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: white
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            hieght: 4%;
+            bottom: 0;
+            animation: fadeIn 2s forwards;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Abdullah Wazir ali Portfolio</h1>
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <img src="file:///E:/homework/and.jpg"hieght:750px; width:1000px;>
+            <p>Hi, I'm Abdullah Wazir, a Web and WordPress Developer. I love building beautiful and user-friendly websites. Whether it's creating eye-catching designs or ensuring smooth functionality, I'm here to bring your ideas to life!</p>
+        </section>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li style="--delay: 0s;">WordPress Design</li>
+                <li style="--delay: 0.2s;">Wordpress Plugin Development</li>
+                <li style="--delay: 0.4s;">HTML & CSS</li>
+                <li style="--delay: 0.6s;">web developer</li>
+                <li style="--delay: 0.6s;">WordPress Installation and Configuration</li>
+                <li style="--delay: 0.6s;">Local Development Environments</li>
+            </ul>
+        </section>
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-item" style="--delay: 0s;">
+                <h3>Project 1</h3>
+                <p>My web development journey started on a simple localhost server where I built 
+                    my first website, sparking a passion for digital creation. Overcoming initial challenges with HTML and CSS, I quickly progressed to working on significant projects for MIT and APS. At MIT, I developed interactive 
+                    features for a student collaboration platform, and at APS, I crafted a user-friendly site that streamlined access to educational resources. These experiences helped me master technologies like React and Node.js while enhancing my design skills. Today, I'm driven to explore new technologies and
+                     create impactful web solutions that make a real difference.</p>
+            </div>
+            <div class="project-item" style="--delay: 0.2s;">
+                <h3>Project 2</h3>
+                <p>My Journey from Simple Beginnings to Prestigious Projects
+
+                    I started my web development journey with basic HTML and CSS, creating my first website without even having a domain. Despite these humble beginnings, my passion for web development grew. I eventually 
+                    worked on significant projects for institutions like MITE and APS. At MITE, I developed interactive features for a student collaboration platform, 
+                    and for APS, I crafted a user-friendly site to streamline access to educational resources. These experiences honed my skills in technologies like React and Node.js, and now, I'm eager to continue
+                     creating impactful web solutions that make a difference.</p>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via LinkedIn or Upwork:</p>
+            <a href="https://www.linkedin.com/in/abdullah-wazir-44frrelancer" target="_blank">LinkedIn</a>
+            <a href="https://www.upwork.com/freelancers/~01f655be586629243d" target="_blank">Upwork</a>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Abdullah Wazir. All rights reserved.</p>
+    </footer>
+</body>
+</html>
